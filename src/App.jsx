@@ -12,6 +12,10 @@ import { CourseFormPage } from './pages/CourseFormPage'
 import { CategoryFormPage } from './pages/CategoryFormPage'
 import Profile from './pages/Profile'
 import MyCourses from './pages/Mycourses'
+import About from "./pages/About";
+import Contact from "./pages/Contact";
+import Careers from "./pages/Careers";
+import Footer from './components/Footer';
 
 const LoadingSpinner = () => (
   <div className="flex items-center justify-center min-h-screen">
@@ -97,9 +101,14 @@ function App() {
                   <Route path="/categories/edit/:id" element={<CategoryFormPage />} />
                   <Route path="/profile" element={<Profile/>} />
                   <Route path="/my-courses" element={<MyCourses/>} />
+                  <Route path="/courses" element={<Courses />} />
+                  <Route path="/about" element={<About />} />
+                  <Route path="/contact" element={<Contact />} />
+                  <Route path="/careers" element={<Careers />} />
                 </Route>
 
               </Routes>
+              <Footer/>
             </div>
           </Router>
         </ErrorBoundary>
